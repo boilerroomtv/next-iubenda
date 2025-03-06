@@ -135,9 +135,9 @@ export const IubendaProvider = ({
   const langCode = lang ?? fallbackLangCode;
   const i18nDictionary =
     (customI18nDictionaries ?? i18nDictionaries)[langCode.toLowerCase()] ??
-    (customI18nDictionaries ?? i18nDictionaries)[langCode.split('-')[0].toLowerCase()] ??
+    (customI18nDictionaries ?? i18nDictionaries)[langCode.split('-')[0]?.toLowerCase() ?? ''] ??
     (customI18nDictionaries ?? i18nDictionaries)[fallbackLangCode.toLowerCase()] ??
-    (customI18nDictionaries ?? i18nDictionaries)[fallbackLangCode.split('-')[0].toLowerCase()];
+    (customI18nDictionaries ?? i18nDictionaries)[fallbackLangCode.split('-')[0]?.toLowerCase() ?? ''];
 
   if (i18nDictionary === undefined) {
     throw new Error(`Cannot find any i18n dictionary for lang "${langCode}" with fallback to "${fallbackLangCode}".`);

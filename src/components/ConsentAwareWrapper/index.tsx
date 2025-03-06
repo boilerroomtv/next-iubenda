@@ -101,7 +101,7 @@ const ConsentAwareWrapper = ({
   useEffect(() => {
     const classNames: string[] = [DEFAULT_WRAPPER_CLASS];
 
-    if (useDefaultStyles === undefined || useDefaultStyles === true) {
+    if ((useDefaultStyles === undefined || useDefaultStyles === true) && styles.wrapper) {
       classNames.push(styles.wrapper);
     }
 
