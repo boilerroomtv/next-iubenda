@@ -8,9 +8,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "sass --no-source-map src/components/ConsentAwareWrapper/styles.module.scss src/components/ConsentAwareWrapper/styles.module.css && prettier --write src/components/ConsentAwareWrapper/styles.module.css",
-    "watch": "sass --watch --no-source-map src/components/ConsentAwareWrapper/styles.module.scss src/components/ConsentAwareWrapper/styles.module.css",
-    "lint": "eslint \"**/*.{ts,tsx,js}\" && prettier --check \"**/*.{ts,tsx,md,scss,css,js}\"",
-    "format": "prettier --write \"**/*.{ts,tsx,md,scss,css,js}\""
+    "watch": "sass --watch --no-source-map src/components/ConsentAwareWrapper/styles.module.scss src/components/ConsentAwareWrapper/styles.module.css"
   },
   "files": [
     "src",

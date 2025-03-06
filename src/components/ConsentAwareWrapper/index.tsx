@@ -119,13 +119,13 @@ const ConsentAwareWrapper = ({
       {state.isEnabled === true
         ? children
         : state.isLoading === true
-        ? customLoadingNodes ?? <div className="mep-next-iubenda-loading">{t.consentAwareWrapper.loading}</div>
-        : customConsentNotGrantedNodes ?? (
-            <div className="mep-next-iubenda-consent-not-granted">
-              {t.consentAwareWrapper.consentNotGranted}
-              <button onClick={() => openPreferences()}>{t.consentAwareWrapper.openPreferencesButtonText}</button>
-            </div>
-          )}
+          ? (customLoadingNodes ?? <div className="mep-next-iubenda-loading">{t.consentAwareWrapper.loading}</div>)
+          : (customConsentNotGrantedNodes ?? (
+              <div className="mep-next-iubenda-consent-not-granted">
+                {t.consentAwareWrapper.consentNotGranted}
+                <button onClick={() => openPreferences()}>{t.consentAwareWrapper.openPreferencesButtonText}</button>
+              </div>
+            ))}
     </div>
   );
 };
